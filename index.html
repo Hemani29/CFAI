@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Hunter Arena</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎮 DUPLICATE HUNTER ARENA</h1>
+
+    <p class="subtitle">
+        Remove all duplicate numbers before time runs out
+    </p>
+
+    <div class="stats">
+
+        <div class="card">
+            <h3>Score</h3>
+            <span id="score">0</span>
+        </div>
+
+        <div class="card">
+            <h3>Lives</h3>
+            <span id="lives">3</span>
+        </div>
+
+        <div class="card">
+            <h3>Time</h3>
+            <span id="timer">60</span>
+        </div>
+
+    </div>
+
+    <div class="difficulty-section">
+
+        <h2>Select Difficulty</h2>
+
+        <div class="difficulty-buttons">
+
+            <button class="difficulty-btn"
+            onclick="setDifficulty('easy')">
+            🟢 Easy
+            </button>
+
+            <button class="difficulty-btn"
+            onclick="setDifficulty('medium')">
+            🟡 Medium
+            </button>
+
+            <button class="difficulty-btn"
+            onclick="setDifficulty('hard')">
+            🔴 Hard
+            </button>
+
+        </div>
+
+    </div>
+
+    <button id="startBtn">
+        START GAME
+    </button>
+
+    <div class="game-section">
+
+        <h2>Game Board</h2>
+
+        <div id="gameBoard"></div>
+
+    </div>
+
+    <div id="message"></div>
+
+    <div id="resultsPanel"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
